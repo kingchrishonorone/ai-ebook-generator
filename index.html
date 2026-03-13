@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Ebook Generator</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:100px;
+background:#f4f4f4;
+}
+button{
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+}
+textarea{
+width:80%;
+height:300px;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>AI Ebook Generator</h1>
+
+<input id="topic" placeholder="Book topic"><br><br>
+
+<button onclick="generate()">Generate Ebook</button>
+
+<textarea id="output"></textarea>
+
+<script>
+function generate(){
+
+let topic=document.getElementById("topic").value
+
+let book=`TITLE: The Ultimate Guide to ${topic}
+
+CHAPTER 1
+Introduction to ${topic}
+
+CHAPTER 2
+Understanding the fundamentals of ${topic}
+
+CHAPTER 3
+Strategies for success
+
+CHAPTER 4
+Common mistakes
+
+CHAPTER 5
+Building long-term mastery`
+
+document.getElementById("output").value=book
+
+}
+</script>
+
+</body>
+</html>
